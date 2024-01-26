@@ -3,5 +3,9 @@ workflows:
         name: Codemagic Sample Workflow
         max_build_duration: 120
         scripts:
-            - name: Echo
-            script: echo "Hello!"
+            - name: Activate Unity license
+            script: | 
+                $UNITY_HOME/Contents/MacOS/Unity -batchmode -quit -logFile \
+                -serial ${UNITY_SERIAL} \
+                -username ${UNITY_EMAIL} \
+                -password ${UNITY_PASSWORD}
