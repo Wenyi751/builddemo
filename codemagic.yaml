@@ -2,5 +2,6 @@ workflows:
     sample-workflow:
         name: Codemagic Sample Workflow
         max_build_duration: 120
-        script: |
-            echo "Hello!"
+        scripts:
+            - name: Echo
+            script: echo "Hello!"
