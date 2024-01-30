@@ -9,7 +9,7 @@ using UnityEngine;
 public static class BuildTool
 {
     [MenuItem("Build Tool / Build WeixinMinigame")]
-    public static void BuildWeixinMinigame()
+    public static void BuildMyGame()
     {
         var outputDir = Path.Combine(Application.dataPath, "..", "Build");
         if (Directory.Exists(outputDir))
@@ -20,7 +20,7 @@ public static class BuildTool
         {
             scenes = EditorBuildSettings.scenes.Where(scene => scene.enabled).Select(scene => scene.path).ToArray(),
             locationPathName = outputDir,
-            target = BuildTarget.WeixinMiniGame,
+            target = BuildTarget.StandaloneOSX,
             options = BuildOptions.None
         };
 
