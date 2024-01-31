@@ -9,3 +9,13 @@ workflows:
                 -serial ${UNITY_SERIAL} \
                 -username ${UNITY_EMAIL} \
                 -password ${UNITY_PASSWORD}
+    sample-workflow1212:
+        name: Codemagic Sample Workflow
+        max_build_duration: 120
+        scripts:
+            - name: Activate Unity license
+              script: | 
+                $UNITY_HOME/Contents/MacOS/Unity -batchmode -quit -logFile \
+                -serial ${UNITY_SERIAL} \
+                -username ${UNITY_EMAIL} \
+                -password ${UNITY_PASSWORD}
