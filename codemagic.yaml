@@ -6,7 +6,7 @@ workflows:
           unity: 2023.1.10f1
         artifacts:
             - &zip Assets/*
-            - &log **/*.log
+            - &meta Assets/**/*.meta
         scripts:
             - name: Step 1
               script: | 
