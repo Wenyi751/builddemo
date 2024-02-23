@@ -7,6 +7,7 @@ workflows:
         cache:
           cache_paths:
             - $CM_BUILD_DIR/Assets
+            - $CM_BUILD_DIR/ProjectSettings
         artifacts:
             - &zip Assets/*
             - &meta Assets/**/*.meta
