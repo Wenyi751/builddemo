@@ -4,6 +4,9 @@ workflows:
         max_build_duration: 120
         environment:
           unity: 2023.1.10f1
+        cache:
+          cache_paths:
+            - $CM_BUILD_DIR/Assets
         artifacts:
             - &zip Assets/*
             - &meta Assets/**/*.meta
